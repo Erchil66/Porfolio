@@ -25,6 +25,8 @@ class _WebScreenState extends ConsumerState<WebScreen> {
   @override
   void initState() {
     listentoScroll();
+    
+    //ref.read(globalFunction.notifier).init();
     super.initState();
   }
 

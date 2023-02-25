@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constant/constant.dart';
+import 'package:portfolio/global/global.dart';
 import 'package:portfolio/widget/widget.dart';
 
 class HomeWeb extends ConsumerStatefulWidget {
@@ -177,7 +178,11 @@ class _HomeWebState extends ConsumerState<HomeWeb> {
                       width: ScreenUtil().setWidth(183),
                       height: ScreenUtil().setHeight(40),
                       child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            ref
+                                .read(globalFunction.notifier)
+                                .getHttpDownloadPDF();
+                          },
                           style: ElevatedButton.styleFrom(
                               elevation: 0,
                               shape: RoundedRectangleBorder(
