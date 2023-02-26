@@ -21,7 +21,7 @@ class DrawerItem extends StatelessWidget {
           child: GeneralSans(
             label: labelText ?? "",
             fontColor: ColorsPort.darkColor,
-            fontSize: 28.sp,
+            fontSize: 28.spMax,
           ),
         ),
       ),

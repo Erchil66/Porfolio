@@ -23,7 +23,7 @@ class DrawerCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 0,
-      width: ScreenUtil().setWidth(MediaQuery.of(context).size.width),
+      width: MediaQuery.of(context).size.width * 50,
       backgroundColor: ColorsPort.lightGreyColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,26 +36,26 @@ class DrawerCustom extends StatelessWidget {
               isFirstletter: false,
               label1: "o",
               label2: "Portfoli",
-              fontSize: 32.sp,
+              fontSize: 32.spMax,
               bold: true,
             ),
           ),
-          ScreenUtil().setVerticalSpacingFromWidth(50),
+          50.verticalSpace,
           DrawerItem(
             pressSelect: homepress,
             labelText: "Home",
           ),
-          ScreenUtil().setVerticalSpacingFromWidth(50),
+          50.verticalSpace,
           DrawerItem(
             pressSelect: history,
             labelText: "Service",
           ),
-          ScreenUtil().setVerticalSpacingFromWidth(50),
+          50.verticalSpace,
           DrawerItem(
             pressSelect: prof,
             labelText: "Projects",
           ),
-          ScreenUtil().setVerticalSpacingFromWidth(50),
+          50.verticalSpace,
           DrawerItem(
             pressSelect: payment,
             labelText: "Contact",
