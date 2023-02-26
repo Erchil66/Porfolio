@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/constant/constant.dart';
 import 'package:portfolio/global/global.dart';
 import 'package:portfolio/widget/widget.dart';
@@ -18,7 +17,7 @@ class _HomeWebState extends ConsumerState<HomeWeb> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 60,
+        vertical: 90,
         horizontal: 95,
       ),
       child: SizedBox(
@@ -85,7 +84,7 @@ class _HomeWebState extends ConsumerState<HomeWeb> {
                               color: ColorsPort.darkColor,
                             ),
                             child: Center(
-                              child: SvgPicture.asset(
+                              child: Image.asset(
                                 AssetOwnImages.github,
                                 width: ScreenUtil().setWidth(63),
                                 height: ScreenUtil().setHeight(63),
@@ -104,7 +103,7 @@ class _HomeWebState extends ConsumerState<HomeWeb> {
                               color: ColorsPort.darkColor,
                             ),
                             child: Center(
-                              child: SvgPicture.asset(
+                              child: Image.asset(
                                 AssetOwnImages.facebook,
                                 width: ScreenUtil().setWidth(38.32),
                                 height: ScreenUtil().setHeight(38.32),
@@ -124,7 +123,7 @@ class _HomeWebState extends ConsumerState<HomeWeb> {
                               color: ColorsPort.primaryColor,
                             ),
                             child: Center(
-                              child: SvgPicture.asset(
+                              child: Image.asset(
                                 AssetOwnImages.linkedin,
                                 width: ScreenUtil().setWidth(64.07),
                                 height: ScreenUtil().setHeight(54.56),

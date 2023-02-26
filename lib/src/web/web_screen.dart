@@ -25,7 +25,7 @@ class _WebScreenState extends ConsumerState<WebScreen> {
   @override
   void initState() {
     listentoScroll();
-    
+
     //ref.read(globalFunction.notifier).init();
     super.initState();
   }
@@ -67,6 +67,7 @@ class _WebScreenState extends ConsumerState<WebScreen> {
                 Image.asset(
                   AssetOwnImages.logo,
                   height: ScreenUtil().setHeight(55),
+                  width: ScreenUtil().setWidth(55),
                 ),
                 10.horizontalSpace,
                 CustomGeneralSans(
@@ -84,14 +85,14 @@ class _WebScreenState extends ConsumerState<WebScreen> {
                   shadow: false,
                   currentIndex: current,
                   onTap: (count) {
-                    onTapUser(count);
+                    //onTapUser(count);
                     global.scrolltoPositon(count);
                   },
                   items: [
                     BottomIndicatorNavigationBarItem(
                         icon: "Home", count: 0, showBadge: false),
                     BottomIndicatorNavigationBarItem(
-                        icon: "Experience", count: 0, showBadge: false),
+                        icon: "Projects", count: 0, showBadge: false),
                     BottomIndicatorNavigationBarItem(
                       icon: "Contact",
                       count: 0,
@@ -107,21 +108,21 @@ class _WebScreenState extends ConsumerState<WebScreen> {
       body: Stack(
         clipBehavior: Clip.none,
         children: [
-          Align(
-            alignment: Alignment.center,
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              child: Opacity(
-                opacity: 0.3,
-                child: Image.asset(
-                  AssetOwnImages.logo,
-                  fit: BoxFit.cover,
-                  alignment: const Alignment(0, -0.3),
-                ),
-              ),
-            ),
-          ),
+          // Align(
+          //   alignment: Alignment.center,
+          //   child: SizedBox(
+          //     width: MediaQuery.of(context).size.width,
+          //     height: MediaQuery.of(context).size.height,
+          //     child: Opacity(
+          //       opacity: 0.3,
+          //       child: Image.asset(
+          //         AssetOwnImages.logo,
+          //         fit: BoxFit.cover,
+          //         alignment: const Alignment(0, -0.3),
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Align(
             alignment: Alignment.center,
             child: ScrollablePositionedList.builder(

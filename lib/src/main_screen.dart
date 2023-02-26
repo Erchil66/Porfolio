@@ -15,8 +15,9 @@ class _MainHomeScreenState extends ConsumerState<MainHomeScreen> {
     return LayoutBuilder(builder: (context1, context2) {
       if (context2.maxWidth >= 1440) {
         return const WebScreen();
-      } else if (context2.maxWidth < 1440 && context2.maxWidth > 555) {
-        return const TabletScreen();
+      } else if (context2.maxWidth < 1440 && context2.maxWidth > 580) {
+        // return const TabletScreen();
+        return const WebScreen();
       } else {
         return const MopbileScreen();
       }
