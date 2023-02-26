@@ -1,4 +1,14 @@
 export 'main_screen.dart';
+export 'mobile/contact/contact_mob.dart';
+export 'mobile/exp/exp_mob.dart';
+export 'mobile/home/home_mob.dart';
+export 'mobile/mobile.dart';
 export 'mobile/mobile_screen.dart';
+export 'mobile/service/service_mob.dart';
 export 'tablet/tablet_screen.dart';
+export 'web/contact/contact_web.dart';
+export 'web/experience/exp_web.dart';
+export 'web/home/home_web.dart';
+export 'web/service/offer_service.dart';
+export 'web/web.dart';
 export 'web/web_screen.dart';

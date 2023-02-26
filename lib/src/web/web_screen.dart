@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,11 +18,12 @@ class WebScreen extends ConsumerStatefulWidget {
 }
 
 class _WebScreenState extends ConsumerState<WebScreen> {
-  onTapUser(int? count) {
-    ref.read(navSelection.notifier).state = count!;
-  }
-
-  final List<Widget> pages = const <Widget>[HomeWeb(), ExpWeb(), ContactWeb()];
+  final List<Widget> pages = const <Widget>[
+    HomeWeb(),
+    ServiceOffer(),
+    ExpWeb(),
+    ContactWeb()
+  ];
 
   @override
   void initState() {
@@ -28,6 +31,10 @@ class _WebScreenState extends ConsumerState<WebScreen> {
 
     //ref.read(globalFunction.notifier).init();
     super.initState();
+  }
+
+  onTapUser(int? count) {
+    ref.read(navSelection.notifier).state = count!;
   }
 
   listentoScroll() {
@@ -44,9 +51,7 @@ class _WebScreenState extends ConsumerState<WebScreen> {
           .map((e) => e.index)
           .toList();
 
-      if (indexes.length == 1) {
-        onTapUser(indexes.first);
-      }
+      onTapUser(indexes.first);
     });
   }
 
@@ -70,10 +75,18 @@ class _WebScreenState extends ConsumerState<WebScreen> {
                   width: ScreenUtil().setWidth(55),
                 ),
                 10.horizontalSpace,
+                // CustomGeneralSans(
+                //   isFirstletter: true,
+                //   label1: "E",
+                //   label2: "rchil",
+                //   fontSize: 36.sp,
+                //   bold: true,
+                // ),
+                // 5.horizontalSpace,
                 CustomGeneralSans(
                   isFirstletter: false,
                   label1: "o",
-                  label2: "Porfoli",
+                  label2: "Portfoli",
                   fontSize: 36.sp,
                   bold: true,
                 ),
@@ -85,19 +98,19 @@ class _WebScreenState extends ConsumerState<WebScreen> {
                   shadow: false,
                   currentIndex: current,
                   onTap: (count) {
-                    //onTapUser(count);
+                    log("Current Count $count");
                     global.scrolltoPositon(count);
+                    onTapUser(count);
                   },
                   items: [
                     BottomIndicatorNavigationBarItem(
                         icon: "Home", count: 0, showBadge: false),
                     BottomIndicatorNavigationBarItem(
+                        icon: "Service", count: 0, showBadge: false),
+                    BottomIndicatorNavigationBarItem(
                         icon: "Projects", count: 0, showBadge: false),
                     BottomIndicatorNavigationBarItem(
-                      icon: "Contact",
-                      count: 0,
-                      showBadge: false,
-                    ),
+                        icon: "Contact", showBadge: false),
                   ],
                 ),
               ],
@@ -108,21 +121,21 @@ class _WebScreenState extends ConsumerState<WebScreen> {
       body: Stack(
         clipBehavior: Clip.none,
         children: [
-          // Align(
-          //   alignment: Alignment.center,
-          //   child: SizedBox(
-          //     width: MediaQuery.of(context).size.width,
-          //     height: MediaQuery.of(context).size.height,
-          //     child: Opacity(
-          //       opacity: 0.3,
-          //       child: Image.asset(
-          //         AssetOwnImages.logo,
-          //         fit: BoxFit.cover,
-          //         alignment: const Alignment(0, -0.3),
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          Align(
+            alignment: Alignment.center,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Opacity(
+                opacity: 0.2,
+                child: Image.asset(
+                  AssetOwnImages.logo,
+                  fit: BoxFit.cover,
+                  alignment: const Alignment(0, -0.3),
+                ),
+              ),
+            ),
+          ),
           Align(
             alignment: Alignment.center,
             child: ScrollablePositionedList.builder(

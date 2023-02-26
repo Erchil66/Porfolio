@@ -12,5 +12,16 @@ class AssetOwnImages {
       telSvg = "$path/tel.svg",
       githubSvg = "$path/github.svg",
       facebookSvg = "$path/facebook.svg",
-      linkedinSvg = "$path/link.svg";
+      linkedinSvg = "$path/link.svg",
+      wib = "$path/wib.png",
+      btq = "$path/btq.png",
+      playstoreSvg = "$path/playstore.svg",
+      playstore = "$path/playstore.png",
+      appstoreSvg = "$path/appstore.svg",
+      appstore = "$path/appstore.png",
+      pets = "$path/pets.png",
+      shopal = "$path/shopal.png",
+      appDev = "$path/appdev.png",
+      uiux = "$path/uiux.png",
+      menu = "$path/menu.png";
 }
