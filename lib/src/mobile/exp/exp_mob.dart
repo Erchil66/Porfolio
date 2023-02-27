@@ -202,6 +202,156 @@ class _ExpMobState extends ConsumerState<ExpMob> {
               ),
             ),
           ),
+          80.verticalSpace,
+          CustomGeneralSans(
+            label1: "es",
+            label2: "Figma Design Sampl",
+            fontSize: 38.spMax,
+            bold: true,
+          ),
+          GeneralSans(
+            label: "As my hobby to create mock-ups for mobile ios and android",
+            fontColor: ColorsPort.darkColor,
+            fontSize: 16.spMax,
+          ),
+          80.verticalSpace,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: ColorsPort.whiteColor,
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(0, 4),
+                    blurRadius: 15,
+                    spreadRadius: 0,
+                    color: ColorsPort.darkColor.withOpacity(0.2),
+                  )
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    AssetOwnImages.pets,
+                    width: MediaQuery.of(context).size.width,
+                    height: 220.spMax,
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                  ),
+                  ScreenUtil().setVerticalSpacingFromWidth(15),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomGeneralSans(
+                          isFirstletter: true,
+                          label1: "P",
+                          label2: "et Addoption UI",
+                          fontSize: 20.spMax,
+                          bold: true,
+                        ),
+                        ScreenUtil().setVerticalSpacingFromWidth(15),
+                        GeneralSans(
+                          label:
+                              "Booking app for pet which are in need of adoption",
+                          fontSize: 12.spMax,
+                          align: TextAlign.left,
+                        ),
+                        ScreenUtil().setVerticalSpacingFromWidth(15),
+                        GestureDetector(
+                          onTap: () {
+                            launchUrl(Uri.parse(
+                                'https://www.figma.com/file/uaOQ7ta868JPNEBLVq8yDY/Pet-Adoption-App?node-id=19%3A225&t=DLXgqa0u2XeneUDp-1'));
+                          },
+                          behavior: HitTestBehavior.translucent,
+                          child: GeneralSans(
+                            label: "Figma Shared link here......",
+                            fontSize: 12.spMax,
+                            align: TextAlign.left,
+                            bold: true,
+                            fontColor: ColorsPort.orangeColor,
+                          ),
+                        ),
+                        15.verticalSpace
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          40.verticalSpace,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: ColorsPort.whiteColor,
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(0, 4),
+                    blurRadius: 15,
+                    spreadRadius: 0,
+                    color: ColorsPort.darkColor.withOpacity(0.2),
+                  )
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    AssetOwnImages.shopal,
+                    width: MediaQuery.of(context).size.width,
+                    height: 220.spMax,
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                  ),
+                  ScreenUtil().setVerticalSpacingFromWidth(15),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomGeneralSans(
+                          isFirstletter: true,
+                          label1: "S",
+                          label2: "hoshopals",
+                          fontSize: 20.spMax,
+                          bold: true,
+                        ),
+                        ScreenUtil().setVerticalSpacingFromWidth(15),
+                        GeneralSans(
+                          label:
+                              "Selling Shirt and other garments or clothings",
+                          fontSize: 12.spMax,
+                          align: TextAlign.left,
+                        ),
+                        ScreenUtil().setVerticalSpacingFromWidth(15),
+                        GestureDetector(
+                          onTap: () {
+                            launchUrl(Uri.parse(
+                                'https://www.figma.com/file/6G6gpD8J9QCVoHfilZ3R1J/shoshoppals?node-id=409%3A1191&t=gjP4qRsNpRssE5MA-1'));
+                          },
+                          behavior: HitTestBehavior.translucent,
+                          child: GeneralSans(
+                            label: "Figma Shared link here......",
+                            fontSize: 12.spMax,
+                            align: TextAlign.left,
+                            bold: true,
+                            fontColor: ColorsPort.orangeColor,
+                          ),
+                        ),
+                        ScreenUtil().setVerticalSpacingFromWidth(15),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

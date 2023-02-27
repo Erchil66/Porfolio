@@ -20,6 +20,7 @@ class _ContactMobState extends ConsumerState<ContactMob> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 55),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomGeneralSans(
             label1: "touch",
